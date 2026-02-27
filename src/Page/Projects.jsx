@@ -1,23 +1,39 @@
 function Projects() {
   const allProjects = [
     {
-      name: "IET Club Nest",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG6XevGqCuDhuX_XVH83TDqaoxgGgaaV3sjA&s",
-      description: "College Club Portal",
+      name: "EMS- Pro",
+      image: "/EMS_Pro.png",
+      description: "Employee Management System",
       github: null,
-      live: null,
-      duration: "Dec 2024 - Mar 2025",
+      frontend: "https://github.com/Rohitk0409/EMS_Frontend",
+      backend: "https://github.com/Rohitk0409/EMS_Backend",
+      live: "https://ems-frontend-dun-zeta.vercel.app/",
+      duration: "Jan 2025 - Feb 2026",
       details: [
-        "Developed a responsive college club portal using React.js, HTML, and CSS with dynamic frontend interaction.",
+        "Designed and developed a full-stack Employee Management System to manage employee records, roles, and organizational data.",
       ],
     },
     {
+      name: "ResumeMetric",
+      image: "/resumeMetric.png",
+      description: "ATS Resume Analyzer",
+      github: null,
+      frontend: "https://github.com/Rohitk0409/ATS_Frontend",
+      backend: "https://github.com/Rohitk0409/ATS_Backend",
+      live: "https://ats-frontend-ug9t.vercel.app/",
+      duration: "Dec 2025 - Jan 2026",
+      details: [
+        "Designed and developed a production-ready ATS Resume Checker allowing users to upload resumes and match against job descriptions.",
+      ],
+    },
+
+    {
       name: "Cloud Notes",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk_RJxxrEg6JMdp-JDl1jAlKMTLG9YsuuECg&s",
+      image: "/cloud_notes.png",
       description: "Online Note-Making Web Application",
       github: "https://github.com/Rohitk0409/Cloud-Notes-React-",
+      frontend: "",
+      backend: "",
       live: null,
       duration: "Sep 2024 – Nov 2024",
       details: [
@@ -30,6 +46,8 @@ function Projects() {
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIAMuT3JVKUuO5VmVV0PCjLGgqsmXlKBZ96A&s",
       github: "https://github.com/Rohitk0409/news-app",
+      frontend: "",
+      backend: "",
       live: null,
       duration: "May 2024 - Jun 2024",
       details: [
@@ -73,29 +91,62 @@ function Projects() {
                 ))}
               </ul>
 
-              {/* Buttons */}
+              {/*action Buttons */}
               <div className="mt-auto flex gap-3">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`text-white text-sm font-medium px-3 py-2 rounded-md transition-colors ${
-                    project.github
-                      ? "bg-gray-800 hover:bg-gray-900"
-                      : "bg-gray-400 pointer-events-none cursor-not-allowed "
-                  }`}
-                >
-                  GitHub
-                </a>
+                {project?.github ? (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`text-white text-sm font-medium px-3 py-2 rounded-md transition-colors ${
+                      project.github
+                        ? "bg-gray-800 hover:bg-gray-900"
+                        : "bg-gray-400 pointer-events-none cursor-not-allowed "
+                    }`}
+                  >
+                    GitHub
+                  </a>
+                ) : (
+                  <>
+                    {" "}
+                    <a
+                      href={project.frontend}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`text-white text-sm font-medium px-3 py-2 rounded-md transition-colors ${
+                        project.frontend
+                          ? "bg-gray-800 hover:bg-gray-900"
+                          : "bg-gray-400 pointer-events-none cursor-not-allowed "
+                      }`}
+                    >
+                      Frontend
+                    </a>
+                    <a
+                      href={project.backend}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`text-white text-sm font-medium px-3 py-2 rounded-md transition-colors ${
+                        project.backend
+                          ? "bg-green-800 hover:bg-green-900"
+                          : "bg-gray-400 pointer-events-none cursor-not-allowed "
+                      }`}
+                    >
+                      Backend
+                    </a>
+                  </>
+                )}
+
                 <a
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={` text-sm font-medium px-3 py-2 rounded-md hover:bg-indigo-700 transition-colors ${
-                    project.live ? "bg-indigo-600 text-white" : "bg-indigo-200 text-white pointer-events-none cursor-not-allowed"
+                    project.live
+                      ? "bg-indigo-600 text-white"
+                      : "bg-indigo-200 text-white pointer-events-none cursor-not-allowed"
                   }`}
                 >
-                  Live Demo
+                  Live
                 </a>
               </div>
             </div>
