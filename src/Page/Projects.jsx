@@ -3,6 +3,18 @@ import { Code, Github, Globe, Rocket, Server } from "lucide-react";
 const Projects = () => {
   const allProjects = [
     {
+      name: "Panjabi House",
+      image: "./projects/panjabiHouse.png",
+      description: "A modern restaurant website",
+      github: "https://github.com/Rohitk0409/Panjabi-House",
+      live: "https://panjabi-house.vercel.app/",
+      duration: "April 2026 - May 2026",
+      tech: ["React", "Node.js", "Tailwind CSS", "AI"],
+      details: [
+        "Designed and developed a responsive restaurant website with a modern UI using React and Tailwind CSS.",
+      ],
+    },
+    {
       name: "EMS- Pro",
       image: "/EMS_Pro.png",
       description: "Employee Management System",
@@ -71,6 +83,19 @@ const Projects = () => {
       tech: ["React", "NewsAPI", "Bootstrap"],
       details: [
         "Responsive news application featuring category-based navigation and live fetching.",
+      ],
+    },
+    {
+      name: "Weather App",
+      description:
+        "A responsive weather application that provides real-time weather data and forecasts for any city.",
+      image: "./projects/reactWeather.png",
+      github: "https://github.com/Rohitk0409/React-Weather-App",
+      live: "https://react-weather-app-theta-six.vercel.app/",
+      duration: "May 2024 - Jun 2024",
+      tech: ["React", "WeatherAPI", "Bootstrap"],
+      details: [
+        "Built a responsive weather application using React and Bootstrap.",
       ],
     },
   ];

@@ -2,7 +2,6 @@ import {
   Award,
   Code2,
   Coffee,
-  ExternalLink,
   Github,
   Instagram,
   Linkedin,
@@ -13,28 +12,28 @@ import {
 const socialMedia = [
   {
     name: "LinkedIn",
-    icon: <Linkedin className="w-4 h-4" />,
+    icon: <Linkedin className="w-6 h-6 md:w-4 md:h-4" />,
     link: "https://www.linkedin.com/",
     gradient: "from-[#0A66C2] to-[#004182]",
     shadow: "shadow-blue-500/20",
   },
   {
     name: "GitHub",
-    icon: <Github className="w-4 h-4" />,
+    icon: <Github className="w-6 h-6 md:w-4 md:h-4" />,
     link: "https://github.com/",
     gradient: "from-[#24292F] to-[#040d16]",
     shadow: "shadow-slate-900/30",
   },
   {
     name: "Instagram",
-    icon: <Instagram className="w-4 h-4" />,
+    icon: <Instagram className="w-6 h-6 md:w-4 md:h-4" />,
     link: "https://www.instagram.com/",
     gradient: "from-[#f09433] via-[#e6683c] to-[#bc1888]",
     shadow: "shadow-orange-500/20",
   },
   {
     name: "LeetCode",
-    icon: <Code2 className="w-4 h-4" />,
+    icon: <Code2 className="w-6 h-6 md:w-4 md:h-4" />,
     link: "https://leetcode.com/",
     gradient: "from-[#FFA116] to-[#C27600]",
     shadow: "shadow-yellow-600/20",
@@ -153,29 +152,18 @@ export default function Home() {
             </div>
 
             {/* Social Link Cloud */}
-            <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-2">
+            <div className="grid grid-cols-4 gap-2">
               {socialMedia.map((social) => (
                 <a
                   key={social.name}
                   href={social.link}
-                  className={`group flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r ${social.gradient} text-white font-bold text-sm shadow-lg ${social.shadow} transition-all duration-300 hover:-translate-y-1 hover:scale-105`}
+                  className={`group flex items-center justify-center  gap-2  py-2.5 rounded-xl bg-gradient-to-r ${social.gradient} text-white font-bold text-sm shadow-lg ${social.shadow} transition-all duration-300 hover:-translate-y-1 hover:scale-105`}
                 >
                   {social.icon}
                   <span className="hidden sm:block">{social.name}</span>
-                  <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               ))}
             </div>
-
-            {/* Main Action Group */}
-            {/* <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-6">
-              <button className="px-8 py-4 bg-slate-900 text-white rounded-2xl font-black text-sm tracking-widest uppercase hover:bg-slate-800 transition-all hover:shadow-2xl flex items-center gap-3 active:scale-95">
-                <Mail className="w-5 h-5" /> Let's Talk
-              </button>
-              <button className="px-8 py-4 bg-white border-2 border-slate-200 text-slate-900 rounded-2xl font-black text-sm tracking-widest uppercase hover:border-slate-900 transition-all flex items-center gap-3 active:scale-95">
-                <Download className="w-5 h-5" /> Resume
-              </button>
-            </div> */}
           </div>
         </div>
       </div>
